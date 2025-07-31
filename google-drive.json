@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "backup-database-alaska",
+  "private_key_id": "46fc021f50ceb5f4227c22bf33f226dfb05ad88b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCIrydsLXV3IJP1\nm1KSaABzKlrcxKff6G1b67M9hIagILaH3TSIn09yzd/4XzBPfMdx8cUcu3u1U3m/\nsL8NPpaKx6HbvxILkqhlnqTxU41Ea/vAPhPpz+7PbxE/hYXhrtueAcSBM2zVjO4E\nRWeNicsu/C9FB4DVQryVFXpAW4kFaoN8J7QW6u9rwzUZh9h470v1HTXSGpZPKy6H\nQs30THRJij+/43j3Q4PiYd7trnBRlSnsfOcBqRI2I+V5hB9bI2bnnHD1IMuONVIh\nyBRB/ndb60caS/sxO/pHJHqAs7b/pRU+mQB1dVpFOKV66/+qwYbg0STvBVKGXVbB\nf7e6jZlvAgMBAAECggEAAOOS82f6tAvhAuSGsO3B+EEl0Y7c7Ip8Nel+f9wcZj/X\ny9ugUH/ll57lvMX7nAGUCfgSZAnlRsmnzaj2zfoQJw+0HQaGV2OBnEsp+pGdumhu\nHrSsBXvF6Ab+qWGMYWOdqwtHosQ4Cjm6w01ZM+8qx68AkbN+0WegeVxGbPuEr4qP\nLym+fzYBcizFBBBytHaRFfaNqNFRv5aAV5eJM+r6zdPplpwd6qYXx8RtGC196ohq\nce3QTAgEpLdwXc12b/UNyO8+yEpGjpJO3uUhTmBdYQvBsysICGnp1yiim0cj5tpD\nWdCaZLJ8KLTsQYLTXyVxRbfw92SL8sk/oLJYRYHiyQKBgQDAXEzWOLlaejGV0876\nkovWvBgBLUgTrgFCiHKjs9Lt/RZsx5epsnUhOgrHlD233FN4AkMGmlqbwaabo9Nf\nIerj6IEppCRgbhZfJKoFjbl0mkAp7CUPrKTQ9a3j7m2dbi208vX0TfT9N9FUTeH1\niMuEAwgdd5VUXfEfwwmzENnB6QKBgQC152zgK7/MoNTy/52BCInyPcXxK0aXxQjF\nxPGbKWZck89rWiaKWxH++ldM+lnDHKBFnWIHYL9l4F//pDIdvqe7KPkGQYJhzBn5\nPH8fvQyvV4RSeU9fKtkbXbofk80MkI+sXg/ihDGxCafrnli10+Ys+FYjqxDcVwZy\nvVv5Z0XRlwKBgQCM/hpDmmghbRcTHqDDAM8Goe9mTW5bHltGDQUaACBG2A6rxM/h\nTjCUHhrwljN2pEN53w6JtHFdYN9hjP7M5+tnCXBCuVEAbTBwpEsKrwqT8Mu+7ptr\nlbtoferq+kPV9IAD9WFZpBpBz7va8wsAETg6lo5IKvKFWCX4hdiCK4OwoQKBgCIU\nJ0ugJqC5iOu1g9aGuQFPHWRfTSxl14zlprYA/ZJehr9/9jR5d1ejovNi+6oYFNa1\n84WaVIFLlfCY3GLCMz5XIMBRSZH04PDWqqJRkqzO4pVo8LvNlTsRRitgT0wJUUFj\npeo0BfM68eCsm8YE2tyV8d1g0RnWm/inDTIebPAlAoGAN6hYnZgcYn6jg1mU9MUZ\nDlyVl1esUgQkC/x5ffTEuVThdM2IbmjMS+e93tjuwGGmOoCXonnlzL9pC3JdFGvO\nCm5EqN3HxrzqqLXvLnywrpkQi1/xmtXcuEg31DV5j/7cIT6UIyEmxplCt/vzwaGo\nveE6S6jFNG1ZHShJnOqCg/Y=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hxcus-783@backup-database-alaska.iam.gserviceaccount.com",
+  "client_id": "118103134856753421680",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hxcus-783%40backup-database-alaska.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
