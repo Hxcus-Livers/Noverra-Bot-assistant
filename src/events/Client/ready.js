@@ -8,6 +8,8 @@ const moment = require('moment');
 const chalk = require('chalk');
 const Table = require('cli-table3');
 const af = require('../../../package.json');
+const config = require('../../../config');
+
 module.exports = {
     event: 'ready',
     once: true,
@@ -80,8 +82,11 @@ module.exports = {
 
         // Tambahkan aktivitas ke bot
         function UpdateStatus() {
-            const serverIp = '51.79.136.184';
-            const serverPort = 7130;
+            // Get server config
+            const serverIp = config.server?.ip;
+            const serverPort = parseInt(config.server?.port);
+            const serverName = config.servers?.name || 'Noverra Roleplay';
+            const serverPrefix = config.servers?.nickname_prefix || 'NOV-RP';
 
             const Options = {
                 host: serverIp,
@@ -92,10 +97,10 @@ module.exports = {
                 if(error)
                 {
                     // console.error("Error querying SAMP server:", error); // Menambahkan log error
-                    status = "Noverra Roleplay: Offline";
+                    status = `${serverName}: Offline`;
                     client.user.setActivity(status, { type: ActivityType.Custom });
                 } else {
-                    status = `NOV-RP (${response['online']}/${response['maxplayers']} Players)`;
+                    status = `${serverPrefix} (${response['online']}/${response['maxplayers']} Players)`;
                     client.user.setActivity(status, {type: ActivityType.Custom });
                 }
             })

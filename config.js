@@ -6,9 +6,9 @@ module.exports = {
         version: "4.9.0", // JANGAN DIUBAH NTAR ERROR
     },
     server: {
-        ip: "51.79.136.184", // IP Server Game
-        port: "7016", // Port Server Game
-        fullAddress: "51.79.136.184:7016" // IP + Port (optional, bisa dihitung otomatis)
+        ip: "208.84.103.75", // IP Server Game
+        port: "7116", // Port Server Game
+        fullAddress: "208.84.103.75:7116" // IP + Port (optional, bisa dihitung otomatis)
     },
     icon: {
         thumbnail: "https://cdn.discordapp.com/icons/824365726419779655/ef29b6d10d199512eded117de805e3e4.webp?size=512", // LOGO SERVER KALIAN
@@ -77,6 +77,7 @@ module.exports = {
     },
     servers: { // NAMA SERVER KALIAN
         name: "Noverra Roleplay",
+        nickname_prefix: "#NOV" // Prefix untuk nickname
     },
     messageSettings: { // PESAN PESAN
         ownerMessage: "Pengembang bot memiliki satu-satunya izin untuk menggunakan perintah ini.",

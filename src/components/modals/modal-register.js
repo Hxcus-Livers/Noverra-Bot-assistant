@@ -14,7 +14,6 @@ const MysqlMortal = mysql.createPool({
 module.exports = {
     customId: 'modal-register',
     /**
-     *  - \`IP Address\`: 51.79.136.184:7130
      * @param {ExtendedClient} client 
      * @param {ButtonInteraction} interaction 
      */
@@ -33,9 +32,7 @@ module.exports = {
             // Check if the username already exists
             const [existingUser] = await MysqlMortal.query('SELECT * FROM accounts WHERE Username = ?', [inputName]);
             if (existingUser.length > 0) {
-                if (interaction.length > 0 ) {
-                    return IntError(interaction, 'Sorry, the account name you entered is already registered. Please try a different account name.');
-                }
+                return IntError(interaction, 'Sorry, the account name you entered is already registered. Please try a different account name.');
             }
 
             // Hash the password
@@ -47,21 +44,24 @@ module.exports = {
                 [inputName, interaction.user.id, hashedPassword, 1]
             );
 
+            // Get server address from config - dengan fallback jika tidak ada
+            const serverAddress = config.server?.fullAddress || `${config.server?.ip || '208.84.103.75'}:${config.server?.port || '7116'}`;
+
             // Send confirmation message to user
             const member = interaction.member;
             const dmEmbed = new EmbedBuilder()
             .setColor('Green')
             .setAuthor({
-              name: 'Noverra Roleplay',
+              name: config.servers?.name || 'Noverra Roleplay',
               iconURL: config.icon.thumbnail
             })  
-            .setDescription(`Hallo **${member}**!! Selamat akun **User Control Panel SA-MP** Anda telah berhasil terdaftar di Noverra Roleplay. Anda dapat langsung login ke dalam game. Selamat Bermain!\n
+            .setDescription(`Hallo **${member}**!! Selamat akun **User Control Panel SA-MP** Anda telah berhasil terdaftar di ${config.servers?.name || 'Noverra Roleplay'}. Anda dapat langsung login ke dalam game. Selamat Bermain!\n
             **💠 Data Akun User Control Panel -**
         
             - \`Nama Akun\`: ${inputName}
-            - \`IP Address\`: 51.79.136.184:7130
+            - \`IP Address\`: ${serverAddress}
             - \`Waktu Pendaftaran\`: <t:${Math.floor(new Date().getTime() / 1000)}:R>`)
-            .setFooter({ text: "©️ Noverra Roleplay" })
+            .setFooter({ text: `©️ ${config.servers?.name || 'Noverra Roleplay'}` })
             .setTimestamp();
             
             if (interaction.replied || interaction.deferred) 
@@ -78,7 +78,7 @@ module.exports = {
               const role = interaction.guild.roles.cache.get(config.idrole.ucp);
               const guildMember = await interaction.guild.members.fetch(interaction.member.id);
               await guildMember.roles.add(role);
-              await guildMember.setNickname(`#NOV | ${inputName}`);
+              await guildMember.setNickname(`${config.servers?.nickname_prefix || '#NOV'} | ${inputName}`);
             } catch (error) {
               console.error('Error assigning role or updating nickname:', error);
             }
@@ -95,7 +95,8 @@ module.exports = {
                         { name: "UCP Name", value: inputName, inline: true },
                         { name: "Discord", value: interaction.user.tag, inline: true },
                         { name: "Discord ID", value: userid, inline: true },
-                        { name: "Register Date", value: `<t:${Math.floor(Date.now() / 1000)}:R>`, inline: true }
+                        { name: "Register Date", value: `<t:${Math.floor(Date.now() / 1000)}:R>`, inline: true },
+                        { name: "Server Address", value: serverAddress, inline: true }
                     )
                     .setFooter({ text: interaction.guild.name })
                     .setTimestamp();
